@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import axios from "axios";
+importimport axios from "axios";
 import Character from "./components/RickandMorty.js";
 import './App.css';
 
@@ -11,24 +11,11 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 
-  const [profile, setProfile] = useState([])
-
-  useEffect(() => {
-    axios.get("https://rickandmortyapi.com/api/character")
-      .then((response) => {
-          setProfile(response.profile.results)
-        console.log(response.data.results)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-
-  }, [])
 
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <Character imgUrl={profile}/>
+      <CharacterContainer />
     </div>
   );
 }

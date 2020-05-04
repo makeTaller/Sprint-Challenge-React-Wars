@@ -1,6 +1,7 @@
 import React from 'react';
 /* import axios from "axios"; */
 import CharacterContainer from "./components/CharacterContainer.js";
+import Navbar from './components/Navbar.js'
 import './App.css';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
 
 return (
     <div className="App">
+        <Navbar />
       <h1 className="Header">React Wars</h1>
       <CharacterContainer />
     </div>

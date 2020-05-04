@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import Character from './Character.js';
+import {Jumbotron, Container } from 'reactstrap'
 import axios from "axios";
 import './StarWars.css';
 
 
-const CharacterContainer=(props)=>{
+const CharacterContainer=()=>{
 
     const [profile, setProfile] = useState([]);
 
@@ -23,6 +24,14 @@ const CharacterContainer=(props)=>{
 
     return (
             <div>
+                <div>
+                    <Jumbotron fluid>
+                        <Container fluid>
+                            <h1 className="display-3"> Rick and Morty </h1>
+                            <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                        </Container>
+                    </Jumbotron>
+                </div>
                  {profile.map((data)=>{
                      return <Character
                                 name={data.name}
@@ -31,7 +40,6 @@ const CharacterContainer=(props)=>{
                                 species={data.species}
                                 status={data.status}
                      />
-
                     })}
             </div>
         )

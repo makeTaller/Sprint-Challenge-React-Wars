@@ -24,7 +24,14 @@ const CharacterContainer=(props)=>{
     return (
             <div>
                  {profile.map((data)=>{
-                 return <Character name={data.name} />
+                     return <Character
+                                name={data.name}
+                                imgUrl={data.image}
+                                gender={data.gender}
+                                species={data.species}
+                                status={data.status}
+                     />
+
                     })}
             </div>
         )

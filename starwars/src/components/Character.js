@@ -8,7 +8,16 @@ const Character =(props)=> {
     return (
 
           <div>
-                  {props.name}
+              <div>
+               {props.name}
+              </div> 
+              <img alt="Profile Image" src={props.imgUrl}/>
+              <div>
+                  {props.gender}
+                  <div>
+                      {props.species}
+                  </div>
+              </div>
         </div>
 
       )

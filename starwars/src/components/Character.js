@@ -1,35 +1,17 @@
-import React, {useState, useEffect} from 'react';
-import axios from "axios";
+import React from 'react';
+import CharacterContainer from './CharacterContainer.js';
+/* import axios from "axios"; */
 
-const Character = () => {
+const Character =(props)=> {
 
-const [profile, setProfile] = useState([]);
-
-    useEffect(() => {
-      axios.get("https://rickandmortyapi.com/api/character")
-        .then((response) => {
-          setProfile(response.profile.results)
-          console.log(response.data.results)
-        })
-        .catch((error) => {
-          console.log(error)
-        })
-    }, [])
 
     return (
 
-      profile.map(() => {
-          return(
           <div>
-            <img alt="" src=""/>
-            <div>{profile.name}</div>
+                  {props.name}
         </div>
-      )
-        }
 
       )
-
-    )
 }
 
 export default Character;

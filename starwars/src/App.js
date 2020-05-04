@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
-importimport axios from "axios";
-import Character from "./components/RickandMorty.js";
+import React from 'react';
+/* import axios from "axios"; */
+import CharacterContainer from "./components/CharacterContainer.js";
 import './App.css';
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
   // sync up with, if any.
 
 
-  return (
+return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
       <CharacterContainer />
